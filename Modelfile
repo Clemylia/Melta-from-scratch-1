@@ -23,7 +23,7 @@ PARAMETER num_predict 256
 # Le template doit correspondre EXACTEMENT au format d'entraînement:
 # "Question: {q}\nRéponse: {r}<EOS_TOKEN>"
 TEMPLATE """
-Question: {{ prompt }}
+Question: {{ message.content }}
 Réponse:
 """
 # Note : {{ prompt }} contient l'entrée de l'utilisateur (le message.content)
